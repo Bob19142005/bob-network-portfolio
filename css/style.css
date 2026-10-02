@@ -1,0 +1,908 @@
+/* ========================================
+   BOB ADLY PIERRE
+   NETWORK ENGINEERING PORTFOLIO
+======================================== */
+
+
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #07111f;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* ========================================
+   GLOBAL COLORS
+======================================== */
+
+:root {
+    --background: #07111f;
+    --background-light: #0c1929;
+    --card: #0d1b2a;
+
+    --primary: #00b8ff;
+    --primary-light: #4fd1ff;
+
+    --text: #ffffff;
+    --text-secondary: #9daabd;
+
+    --border: #1d3047;
+}
+
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(7, 17, 31, 0.95);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 20px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* LOGO */
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+
+/* NAV LINKS */
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    max-width: 1200px;
+    min-height: 90vh;
+
+    margin: auto;
+
+    padding: 100px 30px;
+
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+
+/* HERO TAG */
+
+.tag,
+.section-tag {
+    color: var(--primary);
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+
+/* HERO TITLE */
+
+.hero h1 {
+    font-size: clamp(45px, 6vw, 78px);
+
+    line-height: 1.05;
+
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+
+/* HERO DESCRIPTION */
+
+.hero-description {
+    max-width: 620px;
+
+    color: var(--text-secondary);
+
+    font-size: 18px;
+
+    margin-bottom: 35px;
+}
+
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+}
+
+
+/* PRIMARY BUTTON */
+
+.primary {
+    background: var(--primary);
+
+    color: #04101c;
+}
+
+.primary:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 184, 255, 0.25);
+}
+
+
+/* SECONDARY BUTTON */
+
+.secondary {
+    border: 1px solid #33445a;
+
+    color: white;
+}
+
+.secondary:hover {
+    border-color: var(--primary);
+
+    color: var(--primary);
+
+    transform: translateY(-3px);
+}
+
+
+/* ========================================
+   NETWORK DIAGRAM
+======================================== */
+
+.network-animation {
+    background:
+        linear-gradient(
+            145deg,
+            #0c1929,
+            #08131f
+        );
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0, 0, 0, 0.25);
+}
+
+
+/* ROUTER AND SWITCH */
+
+.router,
+.switch {
+    width: 130px;
+
+    padding: 15px;
+
+    margin: auto;
+
+    border: 1px solid var(--primary);
+
+    border-radius: 6px;
+
+    color: var(--primary);
+
+    font-weight: bold;
+
+    background: #081421;
+
+    box-shadow:
+        0 0 20px
+        rgba(0, 184, 255, 0.08);
+}
+
+
+/* CONNECTION LINE */
+
+.line {
+    width: 2px;
+
+    height: 55px;
+
+    background: var(--primary);
+
+    margin: auto;
+
+    box-shadow:
+        0 0 10px
+        rgba(0, 184, 255, 0.6);
+}
+
+
+/* DEVICES */
+
+.devices {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 40px;
+}
+
+.devices div {
+    border: 1px solid #33445a;
+
+    padding: 10px 15px;
+
+    border-radius: 5px;
+
+    color: #aab8c7;
+
+    background: #081421;
+
+    transition: 0.3s;
+}
+
+.devices div:hover {
+    border-color: var(--primary);
+
+    color: var(--primary);
+}
+
+
+/* ========================================
+   GENERAL SECTIONS
+======================================== */
+
+.section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 110px 30px;
+}
+
+.section h2 {
+    font-size: clamp(35px, 4vw, 55px);
+
+    line-height: 1.15;
+
+    margin-bottom: 30px;
+}
+
+.section h2 span {
+    color: var(--primary);
+}
+
+
+/* ========================================
+   ABOUT
+======================================== */
+
+.about-text {
+    max-width: 800px;
+
+    font-size: 19px;
+
+    color: var(--text-secondary);
+}
+
+
+/* ========================================
+   CISCO HOMELAB
+======================================== */
+
+.homelab-section {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.homelab-content > p:not(.section-tag) {
+    color: var(--text-secondary);
+
+    font-size: 17px;
+}
+
+
+/* HOMELAB IMAGE */
+
+.homelab-image {
+    position: relative;
+}
+
+.homelab-image img {
+    width: 100%;
+
+    max-height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    border: 1px solid #223750;
+
+    box-shadow:
+        0 25px 70px
+        rgba(0, 0, 0, 0.4);
+
+    transition: 0.4s;
+}
+
+.homelab-image img:hover {
+    transform: scale(1.02);
+
+    border-color: var(--primary);
+}
+
+
+/* LAB STATISTICS */
+
+.lab-stats {
+    display: flex;
+
+    gap: 40px;
+
+    margin-top: 40px;
+}
+
+.lab-stats div {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.lab-stats strong {
+    color: var(--primary);
+
+    font-size: 35px;
+}
+
+.lab-stats span {
+    color: #8fa0b4;
+
+    font-size: 14px;
+}
+
+
+/* ========================================
+   PROJECTS
+======================================== */
+
+.project-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+/* PROJECT CARD */
+
+.project-card {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0c1929,
+            #091522
+        );
+
+    border:
+        1px solid
+        #192b40;
+
+    border-radius: 10px;
+
+    padding: 35px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* TOP BLUE LINE */
+
+.project-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 3px;
+
+    background: var(--primary);
+
+    transition: width 0.4s;
+}
+
+.project-card:hover::before {
+    width: 100%;
+}
+
+
+/* PROJECT HOVER */
+
+.project-card:hover {
+    transform: translateY(-7px);
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.25);
+}
+
+
+/* PROJECT NUMBER */
+
+.project-number {
+    display: block;
+
+    color: var(--primary);
+
+    font-size: 13px;
+
+    margin-bottom: 30px;
+
+    letter-spacing: 2px;
+}
+
+
+/* PROJECT TITLE */
+
+.project-card h3 {
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+
+/* PROJECT DESCRIPTION */
+
+.project-card p {
+    color: #91a0b2;
+
+    margin-bottom: 25px;
+}
+
+
+/* PROJECT LINK */
+
+.project-card > a {
+    color: var(--primary);
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.project-card > a:hover {
+    color: var(--primary-light);
+}
+
+
+/* ========================================
+   TECHNOLOGY TAGS
+======================================== */
+
+.technologies {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 30px;
+}
+
+.technologies span {
+    background: #12253a;
+
+    border: 1px solid #213a54;
+
+    color: #8fcbe4;
+
+    padding: 5px 10px;
+
+    border-radius: 4px;
+
+    font-size: 12px;
+}
+
+
+/* ========================================
+   SKILLS
+======================================== */
+
+.skills-grid {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.skills-grid span {
+    background: var(--background-light);
+
+    border: 1px solid #223750;
+
+    color: #c3d0dc;
+
+    padding: 12px 18px;
+
+    border-radius: 6px;
+
+    transition: all 0.3s ease;
+}
+
+.skills-grid span:hover {
+    border-color: var(--primary);
+
+    color: var(--primary);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 184, 255, 0.1);
+}
+
+
+/* ========================================
+   CONTACT
+======================================== */
+
+.contact-section {
+    text-align: center;
+
+    padding-bottom: 130px;
+}
+
+.contact-section p:not(.section-tag) {
+    color: #98a8ba;
+
+    margin-bottom: 30px;
+}
+
+.contact-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    border: 1px solid #33445a;
+
+    padding: 12px 25px;
+
+    border-radius: 6px;
+
+    transition: 0.3s;
+}
+
+.contact-links a:hover {
+    color: var(--primary);
+
+    border-color: var(--primary);
+
+    transform: translateY(-3px);
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    border-top:
+        1px solid
+        #192a3d;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #6f8195;
+
+    font-size: 13px;
+}
+
+
+/* ========================================
+   SCROLLBAR
+======================================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #07111f;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1d4058;
+
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+
+/* ========================================
+   TEXT SELECTION
+======================================== */
+
+::selection {
+    background: var(--primary);
+
+    color: #04101c;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+        padding-top: 80px;
+    }
+
+    .network-animation {
+        max-width: 600px;
+
+        width: 100%;
+    }
+
+
+    .homelab-section {
+        grid-template-columns: 1fr;
+    }
+
+
+    .homelab-image {
+        max-width: 700px;
+    }
+
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding:
+            18px 20px;
+    }
+
+
+    /* Hide menu on small screen */
+
+    .nav-links {
+        display: none;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding:
+            70px 20px;
+
+        gap: 40px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+
+    /* SECTIONS */
+
+    .section {
+        padding:
+            80px 20px;
+    }
+
+
+    /* LAB STATS */
+
+    .lab-stats {
+        gap: 25px;
+
+        flex-wrap: wrap;
+    }
+
+
+    /* DEVICES */
+
+    .devices {
+        flex-wrap: wrap;
+    }
+
+
+    /* BUTTONS */
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        flex-direction: column;
+
+        gap: 10px;
+
+        text-align: center;
+
+        padding:
+            30px 20px;
+    }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 450px) {
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .section h2 {
+        font-size: 34px;
+    }
+
+    .project-card {
+        padding: 25px;
+    }
+
+    .network-animation {
+        padding:
+            35px 15px;
+    }
+}
