@@ -7,6 +7,83 @@
 
 ## 👋 About Me
 
+# 👨‍💻 Bob Adly Pierre | Network Engineering Portfolio
+
+Welcome to my networking portfolio!
+
+I am an **IT Systems student at Collège Boréal** with a strong interest in
+**Network Engineering, IT Infrastructure, and Cybersecurity**.
+
+This portfolio documents my hands-on networking projects and the technical
+skills I am developing through labs, personal projects, and my CCNA studies.
+
+---
+
+## 🎥 Introduction
+
+Welcome to my Network Engineering portfolio.
+
+In this portfolio, I demonstrate practical networking skills through
+hands-on projects involving Cisco routers, switches, routing protocols,
+network troubleshooting, and infrastructure configuration.
+
+<!-- Add your introduction video link here -->
+
+[▶️ Watch My Network Engineer Introduction](YOUR_VIDEO_LINK)
+
+---
+
+## 🌐 Networking Skills
+
+- Cisco Routing & Switching
+- OSPF
+- VLANs
+- Trunking
+- IPv4 Addressing
+- Subnetting
+- Static Routing
+- Inter-VLAN Routing
+- NAT
+- DHCP
+- Network Troubleshooting
+- Cisco Packet Tracer
+- GNS3
+- Windows Server
+- Active Directory
+
+---
+
+## 🧪 Featured Project — OSPF Homelab
+
+This project demonstrates the implementation of **OSPF (Open Shortest Path First)**
+in a Cisco networking environment.
+
+### 🎯 Objectives
+
+The objectives of this lab are to:
+
+- Configure Cisco routers and switches
+- Assign IPv4 addresses
+- Configure OSPF
+- Advertise networks between routers
+- Verify OSPF neighbors
+- Analyze the routing table
+- Test end-to-end connectivity
+- Troubleshoot routing problems
+
+---
+
+## 🔧 Useful Commands
+
+```bash
+show ip interface brief
+show ip route
+show ip ospf neighbor
+show ip ospf interface brief
+show running-config
+ping <destination-ip>
+traceroute <destination-ip>
+
 Hi! I'm **Bob Adly Pierre**, an IT Systems student passionate about:
 
 - 🌐 Network Engineering
